@@ -1,3 +1,10 @@
 .login-button-width {
     min-width: 6rem;
+    background-color: rgba(55, 135, 255, 1);
+    border: none;
+    border-radius: 20px;
+}
+
+.login-button-width:hover {
+    background-color: rgb(13, 100, 231);
 }

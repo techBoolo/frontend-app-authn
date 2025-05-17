@@ -30,6 +30,7 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
 .forgot-password-button-width {
   min-width: 6rem;
 }
+
 .spinner--position-centered {
   left: 0;
   right: 0;
@@ -87,12 +88,18 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
   }
 }
 
+.registration-form {
+  background-color: black;
+}
+
 .form-control {
   background-color: $white !important;
   font-size: 0.875rem;
   line-height: 1.5;
-  height: 2.75rem;
-
+  // height: 2.75rem;
+  height: 3.2rem;
+  border: 1px solid rgba(6, 3, 2, 1);
+  border-radius: 30px;
 }
 
 .btn-social {
@@ -109,7 +116,7 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
   height: 36px;
   color: $primary;
 
-  .btn-tpa__image-icon{
+  .btn-tpa__image-icon {
     background-color: transparent;
     max-height: 24px;
     max-width: 24px;
@@ -293,11 +300,13 @@ select.form-control {
   @extend .x-small;
   filter: drop-shadow($elevation-level-2-shadow) drop-shadow($elevation-level-2-shadow) !important;
   right: 0.2rem !important;
+
   .tooltip-inner {
     background: $white;
     display: block;
     color: $gray-500;
   }
+
   .arrow::before {
     border-left-color: $white;
   }
@@ -318,6 +327,7 @@ select.form-control {
     display: block;
     color: $gray-500;
   }
+
   .arrow::before {
     border-top-color: $white;
   }
@@ -336,7 +346,7 @@ select.form-control {
   color: $gray-700;
 }
 
-.logistration-button:hover{
+.logistration-button:hover {
   color: $gray-700;
   text-decoration: none;
 }
@@ -351,6 +361,7 @@ select.form-control {
 .icon-size {
   width: 2.3rem;
 }
+
 .has-floating-label {
   color: $gray-500;
 }
@@ -364,17 +375,17 @@ select.form-control {
   font-size: 0.75rem;
 }
 
-.form-group__form-field .form-control:focus ~ .pgn__form-control-floating-label .pgn__form-control-floating-label-content {
-    font-size: 16px;
-    color: $primary-700;
+.form-group__form-field .form-control:focus~.pgn__form-control-floating-label .pgn__form-control-floating-label-content {
+  font-size: 16px;
+  color: $primary-700;
 }
 
-.form-group__form-field .form-control:not([value='']):not(:focus) ~
-  .pgn__form-control-floating-label .pgn__form-control-floating-label-content {
+.form-group__form-field .form-control:not([value='']):not(:focus)~.pgn__form-control-floating-label .pgn__form-control-floating-label-content {
   font-size: 16px;
 }
 
 .pgn__form-group {
+
   margin-bottom: 1.75rem;
 }
 
@@ -436,6 +447,7 @@ select.form-control {
 
   #password-requirement-top {
     display: unset;
+
     .tooltip-inner {
       max-width: inherit;
       min-width: unset !important;

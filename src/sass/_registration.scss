@@ -1,12 +1,21 @@
 .register-button {
   min-width: 14.4rem;
+  background-color: rgba(55, 135, 255, 1);
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
 }
 
-.pgn__form-autosuggest__wrapper > .pgn__form-group {
+.register-button:hover {
+  background-color: rgb(13, 100, 231);
+}
+
+.pgn__form-autosuggest__wrapper>.pgn__form-group {
   margin-bottom: 0 !important;
 }
 
-.email-suggestion-alert-error  {
+.email-suggestion-alert-error {
   padding: 0.5rem 1rem;
 
   .email-suggestion__close {
@@ -22,7 +31,7 @@
     line-height: 1.25rem;
   }
 
-  .alert-link  {
+  .alert-link {
     color: $primary !important;
 
     &:hover {
@@ -46,6 +55,7 @@
     font-size: 0.75rem;
     line-height: 1.25rem;
   }
+
   margin-left: 3px;
 }
 
@@ -94,6 +104,7 @@
   .username-scroll-suggested--form-field {
     width: 11rem !important;
   }
+
   .username-suggestions__close__button {
     right: 0.5rem;
   }
@@ -103,6 +114,7 @@
   .username-scroll-suggested--form-field {
     width: 15rem;
   }
+
   .username-suggestions__close__button {
     right: 0.5rem;
   }

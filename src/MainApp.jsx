@@ -29,6 +29,23 @@ import { ResetPasswordPage } from './reset-password';
 
 import './index.scss';
 
+
+
+// At the top of src/MainApp.jsx
+// import React from 'react';
+// ... other existing imports ...
+// import { Navigate, Route, Routes } from 'react-router-dom';
+// import { UnAuthOnlyRoute } from './common-components'; // Keep this if you want its behavior
+
+// ADD THESE IMPORTS (adjust paths as necessary):
+import MyCustomLoginPage from './custom-pages/MyCustomLoginPage';
+import MyCustomCreateAccountPage from './custom-pages/MyCustomCreateAccountPage';
+
+// Keep existing imports like:
+// import Logistration from './logistration/Logistration'; // We will bypass this for login/register
+// ...
+// import { LOGIN_PAGE, REGISTER_PAGE /*, ...other constants */ } from './data/constants';
+
 registerIcons();
 
 const MainApp = () => (
@@ -43,13 +60,22 @@ const MainApp = () => (
         path={REGISTER_EMBEDDED_PAGE}
         element={<EmbeddedRegistrationRoute><RegistrationPage /></EmbeddedRegistrationRoute>}
       />
-      <Route
+      {/* <Route
         path={LOGIN_PAGE}
         element={
           <UnAuthOnlyRoute><Logistration selectedPage={LOGIN_PAGE} /></UnAuthOnlyRoute>
         }
+      /> */}
+      // Modified in MainApp.jsx
+      <Route
+        path={LOGIN_PAGE}
+        element={
+          <UnAuthOnlyRoute><MyCustomLoginPage /></UnAuthOnlyRoute>
+        }
       />
-      <Route path={REGISTER_PAGE} element={<UnAuthOnlyRoute><Logistration /></UnAuthOnlyRoute>} />
+// Modified in MainApp.jsx
+      <Route path={REGISTER_PAGE} element={<UnAuthOnlyRoute><MyCustomCreateAccountPage /></UnAuthOnlyRoute>} />
+      {/* <Route path={REGISTER_PAGE} element={<UnAuthOnlyRoute><Logistration /></UnAuthOnlyRoute>} /> */}
       <Route path={RESET_PAGE} element={<UnAuthOnlyRoute><ForgotPasswordPage /></UnAuthOnlyRoute>} />
       <Route path={PASSWORD_RESET_CONFIRM} element={<ResetPasswordPage />} />
       <Route path={AUTHN_PROGRESSIVE_PROFILING} element={<ProgressiveProfiling />} />

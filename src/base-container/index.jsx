@@ -18,7 +18,7 @@ const BaseContainer = ({ children, showWelcomeBanner, fullName }) => {
   if (enableImageLayout) {
     return (
       <div className="layout">
-        <MediaQuery maxWidth={breakpoints.extraSmall.maxWidth - 1}>
+        {/* <MediaQuery maxWidth={breakpoints.extraSmall.maxWidth - 1}>
           {showWelcomeBanner ? <AuthSmallLayout fullName={fullName} /> : <ImageExtraSmallLayout />}
         </MediaQuery>
         <MediaQuery minWidth={breakpoints.small.minWidth} maxWidth={breakpoints.small.maxWidth - 1}>
@@ -29,7 +29,7 @@ const BaseContainer = ({ children, showWelcomeBanner, fullName }) => {
         </MediaQuery>
         <MediaQuery minWidth={breakpoints.extraLarge.minWidth}>
           {showWelcomeBanner ? <AuthLargeLayout fullName={fullName} /> : <ImageLargeLayout />}
-        </MediaQuery>
+        </MediaQuery> */}
         <div className={classNames('content', { 'align-items-center mt-0': showWelcomeBanner })}>
           {children}
         </div>
@@ -41,7 +41,7 @@ const BaseContainer = ({ children, showWelcomeBanner, fullName }) => {
     <>
       <div className="col-md-12 extra-large-screen-top-stripe" />
       <div className="layout">
-        <MediaQuery maxWidth={breakpoints.small.maxWidth - 1}>
+        {/* <MediaQuery maxWidth={breakpoints.small.maxWidth - 1}>
           {showWelcomeBanner ? <AuthSmallLayout fullName={fullName} /> : <DefaultSmallLayout />}
         </MediaQuery>
         <MediaQuery minWidth={breakpoints.medium.minWidth} maxWidth={breakpoints.large.maxWidth - 1}>
@@ -49,7 +49,7 @@ const BaseContainer = ({ children, showWelcomeBanner, fullName }) => {
         </MediaQuery>
         <MediaQuery minWidth={breakpoints.extraLarge.minWidth}>
           {showWelcomeBanner ? <AuthLargeLayout fullName={fullName} /> : <DefaultLargeLayout />}
-        </MediaQuery>
+        </MediaQuery> */}
         <div className={classNames('content', { 'align-items-center mt-0': showWelcomeBanner })}>
           {children}
         </div>

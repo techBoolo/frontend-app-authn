@@ -29,6 +29,12 @@ import { backupLoginForm } from '../login/data/actions';
 import { RegistrationPage } from '../register';
 import { backupRegistrationForm } from '../register/data/actions';
 
+
+//custom one 
+// At the top of Logistration.jsx
+// import MyCustomLoginPage from '../custom-pages/MyCustomLoginPage'; // Adjust path
+// import MyCustomCreateAccountPage from '../custom-pages/MyCustomCreateAccountPage'; // Adjust path
+
 const Logistration = (props) => {
   const { selectedPage, tpaProviders } = props;
   const tpaHint = getTpaHint();
@@ -129,7 +135,7 @@ const Logistration = (props) => {
                     <Tab title={formatMessage(messages['logistration.sign.in'])} eventKey={LOGIN_PAGE} />
                   </Tabs>
                 ))}
-              { key && (
+              {key && (
                 <Navigate to={updatePathWithQueryParams(key)} replace />
               )}
               <div id="main-content" className="main-content">
@@ -146,6 +152,11 @@ const Logistration = (props) => {
                       handleInstitutionLogin={handleInstitutionLogin}
                     />
                   )}
+
+                {/* {selectedPage === LOGIN_PAGE */}
+                {/* ? <MyCustomLoginPage /* Pass props if needed, e.g., institutionLogin={institutionLogin} */ /> */}
+                {/* : <MyCustomCreateAccountPage /* Pass props if needed, e.g., institutionLogin={institutionLogin} */ /> */}
+                {/* } */}
               </div>
             </div>
           )}

@@ -14,12 +14,14 @@ const messages = defineMessages({
   },
   'registration.email.label': {
     id: 'registration.email.label',
-    defaultMessage: 'Email',
+    // defaultMessage: 'Email',
+    defaultMessage: 'Email Id',
     description: 'Label that appears above email field on register page',
   },
   'registration.username.label': {
     id: 'registration.username.label',
-    defaultMessage: 'Public username',
+    // defaultMessage: 'Public username',
+    defaultMessage: 'Nickname',
     description: 'Label that appears above username field',
   },
   'registration.password.label': {
@@ -61,7 +63,8 @@ const messages = defineMessages({
   // Form buttons
   'create.account.for.free.button': {
     id: 'create.account.for.free.button',
-    defaultMessage: 'Create an account for free',
+    // defaultMessage: 'Create an account for free',
+    defaultMessage: 'Create account',
     description: 'Label text for registration form submission button',
   },
   'create.account.cta.button': {
@@ -165,8 +168,8 @@ const messages = defineMessages({
   'registration.tpa.authentication.failure': {
     id: 'registration.tpa.authentication.failure',
     defaultMessage: 'We are sorry, you are not authorized to access {platform_name} via this channel. '
-        + 'Please contact your learning administrator or manager in order to access {platform_name}.'
-        + '{lineBreak}{lineBreak}Error Details:{lineBreak}{errorMessage}',
+      + 'Please contact your learning administrator or manager in order to access {platform_name}.'
+      + '{lineBreak}{lineBreak}Error Details:{lineBreak}{errorMessage}',
     description: 'Error message third party authentication pipeline fails',
   },
   // Terms of Service and Honor Code

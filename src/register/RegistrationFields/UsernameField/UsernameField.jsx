@@ -15,6 +15,8 @@ import {
 } from '../../data/actions';
 import messages from '../../messages';
 
+import UserIcon from './assets/Icon.png';
+
 /**
  * Username field wrapper. It accepts following handlers
  * - handleChange for setting value change and
@@ -142,6 +144,18 @@ const UsernameField = (props) => {
     >
       {suggestedUsernameDiv}
     </FormGroup>
+
+    // <div style={{ position: 'relative' }}>
+
+    //   <FormGroup
+    //     {...props}
+    //     handleChange={handleOnChange}
+    //     handleFocus={handleOnFocus}
+    //     handleBlur={handleOnBlur}
+    //   >
+    //     {suggestedUsernameDiv}
+    //   </FormGroup>
+    // </div>
   );
 };
 
